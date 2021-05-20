@@ -9,3 +9,5 @@
 Over-Fetching = 必要以上にデータをもらうこと
 
 Under-Fetching = 必要なデータをもらうために 1 回以上の request をする
+
+Schema は私がユーザーに送るとか、ユーザーからもらう Data に対する説明である。
