@@ -1,32 +1,40 @@
-export const people = [
+let movies = [
   {
-    id: "1",
-    name: "nicolas",
-    age: 18,
-    gender: "female",
+    id: 0,
+    name: "Star wars- Shit",
+    score: 8,
   },
   {
-    id: "2",
-    name: "park",
-    age: 30,
-    gender: "male",
+    id: 1,
+    name: "transformer",
+    score: 9,
   },
   {
-    id: "3",
-    name: "shinyong",
-    age: 30,
-    gender: "male",
+    id: 2,
+    name: "interstella",
+    score: 7.5,
   },
   {
-    id: "4",
-    name: "김동영",
-    age: 18,
-    gender: "female",
+    id: 3,
+    name: "Logan",
+    score: 6,
   },
 ];
 
+export const getMovies = () => movies;
+
 export const getById = (id) => {
-  const filteredPeople = people.filter((person) => people.id === id);
-  return filteredPeople[0];
+  const filteredMovies = movies.filter((movie) => movie.id === String(id));
+  return filteredMovies[0];
 };
 //filter는 모든 대상을 거친 뒤 해당조건에 맞는걸 리턴함
+
+export const deleteMovie = (id) => {
+  const cleanedMovies = movies.filter((movie) => movie.id !== String(id));
+  if (movies.length > cleanedMovies.length) {
+    movie = cleanedMovies;
+    return true;
+  } else {
+    return false;
+  }
+};
