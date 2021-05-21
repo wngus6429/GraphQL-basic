@@ -1,3 +1,23 @@
-type Query {
+type Person {
+  id: Int!
   name: String!
+  age: Int!
+  gender: String!
 }
+
+type Query {
+  people: [Person]!
+  person(id: Int!): Person
+  #해당하는 person을 못 찾는 경우가 생길수도 있으니
+  #마지막 ! required를 뺏다.
+}
+
+# type Nicolas {
+#   name: String!
+#   age: Int!
+#   gender: String!
+# }
+
+# type Query {
+#   person: Nicolas!
+# }
